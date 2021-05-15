@@ -67,9 +67,15 @@ GEM
     concurrent-ruby (1.1.8)
     crass (1.0.6)
     erubi (1.10.0)
+    feedjira (3.1.2)
+      loofah (>= 2.3.1)
+      sax-machine (>= 1.0)
     ffi (1.15.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    httparty (0.18.1)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     listen (3.5.1)
@@ -82,11 +88,15 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (1.0.1)
     method_source (1.0.0)
+    mime-types (3.3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2021.0225)
     mini_mime (1.0.3)
     minitest (5.14.4)
     msgpack (1.4.2)
+    multi_xml (0.6.0)
     nio4r (2.5.7)
-    nokogiri (1.11.3-x86_64-linux)
+    nokogiri (1.11.4-x86_64-linux)
       racc (~> 1.4)
     pg (1.2.3)
     puma (5.3.1)
@@ -125,6 +135,10 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rexml (3.2.5)
+    rss (0.2.9)
+      rexml
+    sax-machine (1.3.2)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -147,10 +161,13 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
+  feedjira
+  httparty
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 6.1.3, >= 6.1.3.2)
+  rss (~> 0.2.9)
   spring
   tzinfo-data
 

@@ -17,11 +17,18 @@ class Api::V1::HeadlinesController < ApplicationController
   # POST /headlines
   # Creates an entry in the db with given params
   def create
-    @headline = Headline.new(headline_params)
+    xml = HTTParty.get('https://www.theverge.com/rss/index.xml').body
+    feed = Feedjira.parse(xml)
+
+    first_entry = feed.entries.first
+    result = { title: first_entry.title,
+               article_source: first_entry.url,
+               published_date: first_entry.published }
+    @headline = Headline.new(result)
     if @headline.save
       render json: @headline
     else
-      render error: { error: 'Unable to create record with' }, status: 400
+      render error: { error: 'Headline is still the same, duplicate article source' }, status: 400
     end
   end
 
