@@ -19,11 +19,6 @@ gem 'puma', '~> 5.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-# Handles RSS feeds
-gem 'feedjira'
-gem 'httparty'
-gem 'rss', '~> 0.2.9'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -43,3 +38,11 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
+# Webpacker for React
+gem 'webpacker'
+
+# Handles RSS feeds
+gem 'feedjira'
+gem 'httparty'
+gem 'rss', '~> 0.2.9'

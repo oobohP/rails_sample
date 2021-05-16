@@ -103,6 +103,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
+    rack-proxy (0.6.5)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.1.3.2)
@@ -139,6 +141,7 @@ GEM
     rss (0.2.9)
       rexml
     sax-machine (1.3.2)
+    semantic_range (3.0.0)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -150,6 +153,11 @@ GEM
     thor (1.1.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    webpacker (5.3.0)
+      activesupport (>= 5.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 5.2)
+      semantic_range (>= 2.3.0)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -170,6 +178,7 @@ DEPENDENCIES
   rss (~> 0.2.9)
   spring
   tzinfo-data
+  webpacker
 
 RUBY VERSION
    ruby 3.0.1p64
