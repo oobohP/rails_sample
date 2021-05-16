@@ -1,4 +1,4 @@
-class Api::V1::HeadlinesController < ApplicationController
+class Api::V1::HeadlinesController < ApiController
   before_action :set_headline, only: %i[show update destroy]
 
   # GET /headlines/
