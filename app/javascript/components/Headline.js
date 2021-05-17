@@ -2,7 +2,6 @@ import React from "react";
 
 const Headline = (props) => {
   const list = props.headlines.map((item) => {
-    // console.log(moment.format(item.published_date));
     return (
       <a
         key={item.id}
